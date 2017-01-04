@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.ans{
+	font-family: 'Open Sans', sans-serif;
+}
+.que{
+	font-family: 'Raleway', sans-serif;
+}
+#space{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 20px;
+}
