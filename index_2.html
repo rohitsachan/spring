@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Optimize it</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="mycss.css" rel="stylesheet">
+	
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Spring 3.0</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Q&amp;A
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">IOC</a></li>
+          <li><a href="#">AOP</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Programs
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">IOC</a></li>
+          <li><a href="#">AOP</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="forum.html">Forum</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<div id="space" class="container-fluid">
+<!-- ---------------------------------------------------- -->
+<div id="q1" class="bg-warning que"><h4><b>Q1.</b> What is the difference between <i>GOF Singleton</i> and Spring <i>Singleton Scope?</i></h4></div>
+<button type="button" class="btn btn-success showB">Show Answer</button>
+<button type="button" class="btn btn-success hideB">Hide Answer</button>
+<div class="bg-success ans"><b>Ans: </b>Spring's concept of a singleton bean is quite different from the Singleton pattern as defined in the seminal Gang of Four (GoF) patterns book. The GoF Singleton hard codes the scope of an object such that one and only one instance of a particular class will ever be created per ClassLoader. The scope of the Spring singleton is best described as per container and per bean. This means that if you define one bean for a particular class in a single Spring container, then the Spring container will create one and only one instance of the class defined by that bean definition. The singleton scope is the default scope in Spring.<br/>
+<button type="button" class="btn btn-warning btn-link"><a href="http://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s04.html" target="blank">Source</a></button>
+ <!-- <input type="button" class="btn btn-warning" value="Source" target='blank' onclick="location.href = 'http://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s04.html';" /> -->
+
+</div>
+<!-- ---------------------------------------------------- -->
+
+<div id="q2" class="bg-warning que"><h4><b>Q2.</b> Which Scopes are used by Spring Container?</i></h4></div>
+<button type="button" class="btn btn-success showB">Show Answer</button>
+<button type="button" class="btn btn-success hideB">Hide Answer</button>
+<div class="bg-success ans"><b>Ans: </b><ol><li>Singleton</li><li>Prototype</li><li>Request</li><li>Session</li><li>Global-Session (For Portlets Only)</li></ol><br/> 
+<button type="button" class="btn btn-warning"><a href="http://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s04.html" target="blank">Source</a></button></div>
+<!-- ---------------------------------------------------- -->
+
+<div id="q3" class="bg-warning que"><h4><b>Q3.</b> Difference among @Inject, @Autowired, @Qualifier, @Resource.</h4></div>
+<button type="button" class="btn btn-success showB">Show Answer</button>
+<button type="button" class="btn btn-success hideB">Hide Answer</button>
+<div class="bg-success ans"><b>Ans: </b>Answer<br/> 
+<button type="button" class="btn btn-warning"><a href="http://blogs.sourceallies.com/2011/08/spring-injection-with-resource-and-autowired/" target="blank">Source 1</a></button>
+<button type="button" class="btn btn-warning" onclick="alert('Book : Pro Spring 3\nPage : 179');"><a href="#">Source 2</a></button>
+</div>
+<!-- ---------------------------------------------------- -->
+	
+	<div id="q1" class="bg-warning que"><h4>Q3. </h4></div>
+	<button type="button" class="btn btn-success showB">Show Answer</button>
+	<button type="button" class="btn btn-success hideB">Hide Answer</button>
+	<div class="bg-success ans"><b>Ans: </b>Answer<br/> 
+	<button type="button" class="btn btn-warning"><a href="" target="blank">Source</a></button>
+	</div>
+<!-- ---------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------------ Question Template --------------------------------- -->
+	
+	<div id="q1" class="bg-warning que"><h4>Q3. </h4></div>
+	<button type="button" class="btn btn-success showB">Show Answer</button>
+	<button type="button" class="btn btn-success hideB">Hide Answer</button>
+	<div class="bg-success ans"><b>Ans: </b>Answer<br/> 
+	<button type="button" class="btn btn-warning"><a href="" target="blank">Source</a></button>
+	</div>
+<!-- ---------------------------------------------------- -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".ans").hide();
+		$('.hideB').hide();
+		
+		$(".showB").on('click', function () {
+			$(this).next().next().slideDown();
+			$(this).hide();
+			$(this).next().show();
+		});
+		$(".hideB").on('click', function () {
+			$(this).next().slideUp();
+			$(this).hide();
+			$(this).prev().show();
+		})
+	});
+</script>
+</body>
+</html>
